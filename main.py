@@ -1,7 +1,7 @@
 # main.py
 import streamlit as st
 import folium
-from strimlit-folium import st_folium
+from strimlit_folium import st_folium
 import pandas as pd
 
 # 1. 웹 페이지 설정
