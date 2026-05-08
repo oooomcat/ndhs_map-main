@@ -8,7 +8,9 @@ import pandas as pd
 st.set_page_config(page_title="남동고 등산 메이트", layout="wide")
 
 st.title("2026 학교 등산 행사 안내 지도")
-st.markdown("우리 동아리가 **직접 발로 뛰며 만든** *코스 가이드*입니다.")
+st.markdown("**강조** *이탤릭체*")
 st.markdown("# 큰 제목")
 st.markdown("## 작은 제목")
 st.text("안녕^-^")
+
+st.code("a=3")
