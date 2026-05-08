@@ -29,7 +29,7 @@ m = folium.Map(
 )
 folium.Marker(
       location=[37.404160, 126.719249],
-      popup = "클릭해보세요
+      popup = "클릭해보세요"
       tooltip= "남동고등학교", 
       icon = folium.Icon(color='purple', icon='info-sign')
   ).add_to(m)
