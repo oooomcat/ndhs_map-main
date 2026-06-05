@@ -26,7 +26,7 @@ df_latlon = df_latlon.rename(columns={'위도':'lat','경도':'lon'})
 m = folium.Map(
     location=[
 37.404160, 126.719249],
-    zoom_start=12
+    zoom_start=15
 )
 """
 folium.Marker(
