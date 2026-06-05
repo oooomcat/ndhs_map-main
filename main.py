@@ -21,13 +21,14 @@ df = pd.read_csv('등산경로.csv', encoding = 'utf-8')
 df_latlon = df[['위도','경도']]
 df_latlon = df_latlon.rename(columns={'위도':'lat','경도':'lon'})
 # st.map(df_latlon)
-"""
+
 # 지도 생성 및 마커 표시(시각화 단계)
 m = folium.Map(
     location=[
 37.404160, 126.719249],
     zoom_start=12
 )
+"""
 folium.Marker(
     location=[37.404160, 126.719249],
     popup = "ㅁㅁㅁ",
