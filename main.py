@@ -16,10 +16,11 @@ st.text("안녕^-^")
 st.code("a=3")
 
 #데이터 읽어오기(데이터 수집 csv)
-df = pd.read_csv('인천광역시 남동구_고등학교_20240325.csv', encoding = 'cp949')
+# df = pd.read_csv('인천광역시 남동구_고등학교_20240325.csv', encoding = 'cp949')
+df = pd.read_csv('등산경로.csv', encoding = 'cp949')
 df_latlon = df[['위도','경도']]
 df_latlon = df_latlon.rename(columns={'위도':'lat','경도':'lon'})
-st.map(df_latlon)
+# st.map(df_latlon)
 
 # 지도 생성 및 마커 표시(시각화 단계)
 m = folium.Map(
@@ -33,6 +34,14 @@ folium.Marker(
     tooltip= "남동고등학교", 
     icon = folium.Icon(color='purple', icon='info-sign')
 ).add_to(m)
+'''
+for i in range(len(df)):
+    folium.Marker(
+        location=[df.iloc[i]['위도'], df.iloc[i]['경도']],
+        popup = f'<div style = "width:150px"> </strong>{df.iloc[i]['위치명']}</strong></div>',
+        tooltip= "남동고등학교", 
+        icon = folium.Icon(color='purple', icon='info-sign')
+    ).add_to(m)
 
 #화면 출력
 st_folium(m, width=700, height=500)
