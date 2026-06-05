@@ -16,7 +16,7 @@ st.text("안녕^-^")
 st.code("a=3")
 
 #데이터 읽어오기(데이터 수집 csv)
-# df = pd.read_csv('인천광역시 남동구_고등학교_20240325.csv', encoding = 'cp949')
+# df = pd.read_csv('인천광역시 남동구_고등학교_20240325.csv', encoding = 'utf-8')
 df = pd.read_csv('등산경로.csv', encoding = 'cp949')
 df_latlon = df[['위도','경도']]
 df_latlon = df_latlon.rename(columns={'위도':'lat','경도':'lon'})
