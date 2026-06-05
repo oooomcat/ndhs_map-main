@@ -21,7 +21,7 @@ df = pd.read_csv('등산경로.csv', encoding = 'cp949')
 df_latlon = df[['위도','경도']]
 df_latlon = df_latlon.rename(columns={'위도':'lat','경도':'lon'})
 # st.map(df_latlon)
-
+"""
 # 지도 생성 및 마커 표시(시각화 단계)
 m = folium.Map(
     location=[
@@ -34,7 +34,7 @@ folium.Marker(
     tooltip= "남동고등학교", 
     icon = folium.Icon(color='purple', icon='info-sign')
 ).add_to(m)
-'''
+"""
 for i in range(len(df)):
     folium.Marker(
         location=[df.iloc[i]['위도'], df.iloc[i]['경도']],
