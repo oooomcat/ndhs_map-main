@@ -40,7 +40,7 @@ for i in range(len(df)):
     folium.Marker(
         location=[df.iloc[i]['위도'], df.iloc[i]['경도']],
         popup = f'<div style = "width:150px"> </strong>{df.iloc[i]['위치명']}</strong></div>',
-        tooltip= "나를 클릭하세", 
+        tooltip= "나를 클릭하세요", 
         icon = folium.Icon(color='purple', icon='info-sign')
     ).add_to(m)
 
