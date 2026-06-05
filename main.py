@@ -25,7 +25,7 @@ df_latlon = df_latlon.rename(columns={'위도':'lat','경도':'lon'})
 # 지도 생성 및 마커 표시(시각화 단계)
 m = folium.Map(
     location=[
-37.404160, 126.719249],
+37.405969, 126.721529],
     zoom_start=15
 )
 """
