@@ -123,7 +123,7 @@ for course_name, group in df.groupby('코스'):
 # 4.화면 출력
 col1, col2 = st.columns([3,1])
 with col1:
-    st.subheader("(￣▽￣) 등산 경로 지도")
+    st.subheader("등산 경로 지도")
     st_folium(m, width=700, height=500)
 with col2:
     st.subheader("정보") #코스정보
