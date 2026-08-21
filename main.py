@@ -126,7 +126,7 @@ with col1:
     st.subheader("등산 경로 지도")
     st_folium(m, width=700, height=500)
 with col2:
-    st.subheader("정보") #코스정보
+    st.subheader("코스 상세 안내") #코스정보
     st.info("길이 미끄럽습니다. 주의하세요.")
     st.metric(label="소요시간", value="10분")
     st.write("주의사항 : 등산화를 착용하세요.(●'◡'●)")
