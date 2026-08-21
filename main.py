@@ -72,7 +72,7 @@ else:
 
 m = folium.Map(
     location=[
-37.405969, 126.721529],
+37.40755, 126.71965],
     zoom_start=16
 )
 # 4-1. 코스별 마커 및 경로 선(PolyLine) 시각화
