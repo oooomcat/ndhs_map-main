@@ -127,7 +127,7 @@ with col1:
     st_folium(m, width=700, height=500)
 with col2:
     st.subheader("코스 상세 안내") #코스정보
-    if selected_course != "전체 코스 보기"
+    if selected_course != "전체 코스 보기" :
         c_key = selected_course + '코스'
         info = course_info.get(c_key, {})
         st.marker(f"### **{slested_coruse}")
