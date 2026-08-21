@@ -75,14 +75,6 @@ m = folium.Map(
 37.405969, 126.721529],
     zoom_start=15
 )
-"""
-folium.Marker(
-    location=[37.404160, 126.719249],
-    popup = "ㅁㅁㅁ",
-    tooltip= "남동고등학교", 
-    icon = folium.Icon(color='purple', icon='info-sign')
-).add_to(m)
-"""
 for i in range(len(df)):
     folium.Marker(
         location=[df.iloc[i]['위도'], df.iloc[i]['경도']],
@@ -100,4 +92,4 @@ with col2:
     st.info("길이 미끄럽습니다. 주의하세요.")
     st.metric(label="소요시간", value="10분")
     st.write("주의사항 : 등산화를 착용하세요.(●'◡'●)")
-st_folium(m, width=700, height=500)
+
