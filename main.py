@@ -73,7 +73,7 @@ else:
 m = folium.Map(
     location=[
 37.405969, 126.721529],
-    zoom_start=18
+    zoom_start=16
 )
 # 4-1. 코스별 마커 및 경로 선(PolyLine) 시각화
 for course_name, group in df.groupby('코스'):
