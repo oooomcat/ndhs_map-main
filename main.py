@@ -7,16 +7,10 @@ import pandas as pd
 # 1. 웹 페이지 설정
 st.set_page_config(page_title="남동고 등산 메이트", layout="wide")
 
-st.title("2026 학교 등산 행사 안내 지도")
-st.markdown("**강조** *이탤릭체*")
-st.markdown("# 큰 제목")
-st.markdown("## 작은 제목")
-st.text("안녕^-^")
-
-st.code("a=3")
-
 # 2. 데이터 읽어오기(데이터 수집 csv)
-# df = pd.read_csv('인천광역시 남동구_고등학교_20240325.csv', encoding = 'utf-8')
+# df = pd.read_csv('등산경로.csv', encoding = 'utf-8')
+# 코스의 위치에 해당하는 사진 이미지 이름 : "images/A입구.jpg"
+df['이미지'] = 'images/'+ df['코스'] + df['위치명'] + '.jpg'
 df = pd.read_csv('등산경로.csv', encoding = 'utf-8')
 df_latlon = df[['위도','경도']]
 df_latlon = df_latlon.rename(columns={'위도':'lat','경도':'lon'})
