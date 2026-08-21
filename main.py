@@ -73,26 +73,8 @@ else:
 m = folium.Map(
     location=[
 37.405969, 126.721529],
-    zoom_start=15
+    zoom_start=18
 )
-for i in range(len(df)):
-    folium.Marker(
-        location=[df.iloc[i]['위도'], df.iloc[i]['경도']],
-        popup = f'<div style = "width:150px"> </strong>{df.iloc[i]['위치명']}</strong></div>',
-        tooltip= "나를 클릭하세요", 
-        icon = folium.Icon(color='purple', icon='info-sign')
-    ).add_to(m)
-
-# 4.화면 출력
-col1, col2 = st.columns([3,1])
-with col1:
-    st_folium(m, width=700, height=500)
-with col2:
-    st.subheader("정보") #코스정보
-    st.info("길이 미끄럽습니다. 주의하세요.")
-    st.metric(label="소요시간", value="10분")
-    st.write("주의사항 : 등산화를 착용하세요.(●'◡'●)")
-
 # 4-1. 코스별 마커 및 경로 선(PolyLine) 시각화
 for course_name, group in df.groupby('코스'):
     # 특정 코스가 선택된 경우 해당 코스만 그리기
@@ -136,3 +118,14 @@ for course_name, group in df.groupby('코스'):
             icon=folium.Icon(color=marker_color, icon='info-sign')
         ).add_to(m)
 
+
+
+# 4.화면 출력
+col1, col2 = st.columns([3,1])
+with col1:
+    st_folium(m, width=700, height=500)
+with col2:
+    st.subheader("정보") #코스정보
+    st.info("길이 미끄럽습니다. 주의하세요.")
+    st.metric(label="소요시간", value="10분")
+    st.write("주의사항 : 등산화를 착용하세요.(●'◡'●)")
